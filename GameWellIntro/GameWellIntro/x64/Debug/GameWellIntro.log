@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Temp\Jasons Work\GameWellIntro\GameWellIntro\main.cpp(32,8): warning C4101: 'input': unreferenced local variable
+  GameWellIntro.vcxproj -> C:\Temp\Jasons Work\GameWellIntro\x64\Debug\GameWellIntro.exe
