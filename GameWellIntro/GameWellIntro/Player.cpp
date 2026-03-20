@@ -2,7 +2,9 @@
 
 void Player::Update()
 {
+
 	Movement();
+	m_mesh.Update();
 
 }
 
