@@ -1,10 +1,11 @@
 #include "Game.h"
+#include <Windows.h>
 #include <iostream>
 
 void Game::StartUp()
 {
 	m_screenOpen = m_screen.CreateScreen("Gamescreen");
-	m_obj.Init("assets/archer.bmp", 300, 300, 50, 50, true);
+	m_obj.Init("assets/archer.bmp", 200, 300, 50, 50, true);
 
 	m_player.Init();
 
@@ -16,18 +17,10 @@ void Game::StartUp()
 
 void Game::Update()
 {
-	
+		
+		m_screen.SetBackgroundRGB(m_r, m_g, m_b);
 
-		if (m_player.GetMesh().IsOverlapping(m_obj))
-		{
-			m_screen.SetBackgroundRGB(255, 0, 0);
-		}
-		else
-		{
-			m_screen.SetBackgroundRGB(m_r, m_g, m_b);
-		}
-
-
+		
 		switch (rand() % 3)
 		{
 		case(0):
@@ -89,10 +82,9 @@ void Game::Update()
 			m_flipB = false;
 		}
 
-	m_player.Update();
-	m_screen.Update();
-	
-	
+		m_screen.Update();
+		m_player.Update();
+		m_obj.Update();
 }
 
 
